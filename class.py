@@ -15,14 +15,14 @@ class courses_offered:
   other_course_offering_details = "NA"
 
 # Class 3
-class course_scheduled(Courses_offered):
+class course_scheduled(courses_offered):
   course_schedule_id = "xyz"
   course_schedule_details = "abc"
   def course_offering_id(self):
     self.course_offering_id
 
 # Class 4
-class Student_Course_Registeration(Student_id,course_scheduled):
+class Student_Course_Registeration(Student,course_scheduled):
   def __init__(self):
     self.course_schedule_id
     self.student_id
